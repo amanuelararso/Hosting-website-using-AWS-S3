@@ -85,13 +85,13 @@ Mine is http://staticwebbucket89.s3-website-us-west-2.amazonaws.com
 **Amazon CloudFront Configuration**
 
 1. Create a Distribution:
-        a. Go to Amazon CloudFront.
-        b. Create a new distribution.
-        c. Paste the S3 website endpoint into the "Origin Domain" section, e.g., 'staticwebbucket89.s3-website-us-west-2.amazonaws.com'. Be careful not to enter the S3 address like staticwebbucket89.s3.us-west-2.amazonaws.com; it won't work with this.
-        d. Set the Viewer Protocol Policy to "Redirect HTTP to HTTPS."
-        e. Do not enable WAF (Web Application Firewall).
-        f. Choose the custom SSL certificate from the dropdown.
-        g. Leave anything else as default and click "Create Distribution."
+        1. Go to Amazon CloudFront.
+        2. Create a new distribution.
+        3. Paste the S3 website endpoint into the "Origin Domain" section, e.g., 'staticwebbucket89.s3-website-us-west-2.amazonaws.com'. Be careful not to enter the S3 address like staticwebbucket89.s3.us-west-2.amazonaws.com; it won't work with this.
+        4. Set the Viewer Protocol Policy to "Redirect HTTP to HTTPS."
+        5. Do not enable WAF (Web Application Firewall).
+        6. Choose the custom SSL certificate from the dropdown.
+        7. Leave anything else as default and click "Create Distribution."
 
 ## Contributing
 
