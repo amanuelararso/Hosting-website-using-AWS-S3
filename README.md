@@ -66,25 +66,25 @@ Mine is http://staticwebbucket89.s3-website-us-west-2.amazonaws.com
 
 **Domain and SSL Certificate Configuration**
 
-    1. Configure DNS (Route 53):
+1. Configure DNS (Route 53):
         Create a hosted zone with the name of your domain, e.g., amanuelararso.me, and set the type to "public hosted zone."
         After the zone is created, NS (Name Server) and SOA (Start of Authority) records will appear by default.
         If your domain is not bought from Route 53, add the four nameservers shown in the NS records to the "Manage Nameservers" section of your domain's DNS settings.
 
-    2. SSL Certificate (Certificate Manager):
+2. SSL Certificate (Certificate Manager):
         Go to AWS Certificate Manager.
         Click on "Request a certificate," then select "Request a public certificate."
         Input your domain name and leave all other settings as default.
         Wait for a minute for the certificate to be issued.
 
-    3. Add SSL Certificate to Route 53:
+3. Add SSL Certificate to Route 53:
         Click on the certificate ID in AWS Certificate Manager.
         Click on "Create records in Route 53."
         You will see that a third record is added under your previously created hosted zone.
 
 **Amazon CloudFront Configuration**
 
-    Create a Distribution:
+1.Create a Distribution:
         Go to Amazon CloudFront.
         Create a new distribution.
         Paste the S3 website endpoint into the "Origin Domain" section, e.g., staticwebbucket89.s3-website-us-west-2.amazonaws.com. Be careful not to enter the S3 address like staticwebbucket89.s3.us-west-2.amazonaws.com; it won't work with this.
