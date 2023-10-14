@@ -92,6 +92,12 @@ To Create a Distribution:
 6. Choose the custom SSL certificate from the dropdown.
 7. Leave anything else as default and click "Create Distribution."
 
+## EXAMPLE 
+Your website should be live by now. My website is:
+```
+https://amanuelararso.me
+```
+
 ## Contributing
 
 Contributions to this project are welcome! If you have improvements, suggestions, or bug fixes, feel free to open an issue or create a pull request.
