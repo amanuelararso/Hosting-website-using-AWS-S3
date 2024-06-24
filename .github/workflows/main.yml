@@ -10,13 +10,15 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo "Hello World"
-        shell: bash
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-  goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Goodbye World
-        run: echo "Goodbye World"
-        shell: bash
+    - name: Upload to S3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1' 
+        S3_BUCKET: 'lambda-code-deployment3423'  
+        S3_KEY: 'test-python-function/index.html'  
+      run: |
+        aws s3 cp index.html s3://$S3_BUCKET/$S3_KEY
